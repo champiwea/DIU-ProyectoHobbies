@@ -1,0 +1,106 @@
+.text {
+  color: var(--text-color);
+  text-align: left;
+}
+
+.text.centerText {
+  text-align: center;
+}
+
+.text.lineHeight-small {
+  line-height: 1.3rem;
+}
+
+.text.lineHeight-normal {
+  line-height: 1.5rem;
+}
+
+.text.lineHeight-medium {
+  line-height: 1.7rem;
+}
+
+.text.lineHeight-large {
+  line-height: 1.8rem;
+}
+
+.text.font-footnote {
+  font-size: var(--text-font-size-footnote);
+}
+
+.text.font-caption2 {
+  font-size: var(--text-font-size-caption2);
+}
+
+.text.font-caption {
+  font-size: var(--text-font-size-caption);
+}
+
+.text.font-body {
+  font-size: var(--text-font-size-body);
+}
+
+.text.font-callout {
+  font-size: var(--text-font-size-callout);
+}
+
+.text.font-bigger {
+  font-size: var(--text-font-size-bigger);
+}
+
+.text.weight-light {
+  font-weight: var(--text-weight-light);
+}
+
+.text.weight-regular {
+  font-weight: var(--text-weight-regular);
+}
+
+.text.weight-medium {
+  font-weight: var(--text-weight-medium);
+}
+
+.text.weight-semibold {
+  font-weight: var(--text-weight-semibold);
+}
+
+.text.weight-bold {
+  font-weight: var(--text-weight-bold);
+}
+
+.text.weight-extrabold {
+  font-weight: var(--text-weight-extrabold);
+}
+
+.text.strikeThrough {
+  text-decoration: line-through;
+}
+
+/* --- Colors ---  */
+
+.text.color-black {
+  color: var(--text-color);
+}
+
+.text.color-white {
+  color: var(--text-color-light);
+}
+
+.text.color-gray {
+  color: var(--text-gray-color);
+}
+
+.text.color-lightgray {
+  color: var(--text-lightgray-color);
+}
+
+.text.color-primary {
+  color: var(--text-primary-color);
+}
+
+.text.color-success {
+  color: var(--text-success-color);
+}
+
+.text.color-danger {
+  color: var(--text-danger-color);
+}

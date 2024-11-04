@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from '../../components';
 import Star from '../../icons/solid/Star';
 import s from './CoverBook.module.css';
+import React from 'react';
 
 const rating = 3;
 

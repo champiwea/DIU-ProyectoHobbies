@@ -1,4 +1,5 @@
 import s from './CoverBook.module.css';
+import React from 'react';
 
 export const CoverBook = () => {
   return(

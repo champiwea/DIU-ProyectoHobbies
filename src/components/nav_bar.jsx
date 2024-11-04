@@ -21,6 +21,12 @@ export const NavBar = () => {
       >
         Ampolleta
       </NavLink>
+      <NavLink
+        className={navLinkClass}
+        to='/resenia'
+      >
+        Reseña
+      </NavLink>
     </nav>
   )
 }

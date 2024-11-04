@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import CoverBook from '../pages/CoverBook/CoverBook';
+import CoverBook from '../pages/CoverBook';
 import HomePage from '../pages/home_page';
 import LightbulbPage from '../pages/lightbulb_page';
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const Star = (style, size) => (
+const Star = ({ style, size }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"

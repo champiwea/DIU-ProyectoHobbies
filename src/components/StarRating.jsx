@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const StarRating = ({ onRatingChange }) => {
-  const [rating, setRating] = useState(0); // Estado para la calificación seleccionada
+  const [rating, setRating] = useState(0); 
 
   const handleClick = (index) => {
-    setRating(index); // Actualiza la calificación seleccionada
+    setRating(index); 
     if (onRatingChange) {
-      onRatingChange(index); // Llama a la función para notificar el cambio
+      onRatingChange(index); 
     }
   };
 
@@ -18,7 +18,7 @@ const StarRating = ({ onRatingChange }) => {
           onClick={() => handleClick(index)}
           style={{
             ...styles.star,
-            color: index <= rating ? 'yellow' : 'gray' // Cambia el color si la estrella está seleccionada
+            color: index <= rating ? 'yellow' : 'gray' 
           }}
         >
           ★
@@ -31,12 +31,12 @@ const StarRating = ({ onRatingChange }) => {
 const styles = {
   container: {
     display: 'flex',
-    gap: '5px', // Espacio entre las estrellas
+    gap: '5px', 
     cursor: 'pointer',
-    fontSize: '70px' // Tamaño de las estrellas
+    fontSize: '70px' 
   },
   star: {
-    transition: 'color 0.2s', // Efecto de transición al hacer clic
+    transition: 'color 0.2s', 
     outline: 'none'
   }
 };

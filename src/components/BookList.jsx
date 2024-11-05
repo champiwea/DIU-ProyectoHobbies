@@ -9,10 +9,10 @@ const BookList = ({books, setBooks}) => {
     const navigate = useNavigate();
 
     const handleBookClick = (book) => {
-        navigate('/coverbook', { state: { book } }); // Navega a la ruta y pasa el libro como estado
+        navigate('/coverbook', { state: { book } }); 
     };
 
-    // Filtra los libros en función del término de búsqueda
+
     const filteredBooks = books.filter(
     (book) =>
         book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

@@ -8,13 +8,7 @@
   position: relative;
   border-bottom: 1px solid #444;
 
-  .lupa {
-    width: 24px; /* Tamaño del círculo de la lupa */
-    height: 24px; /* Tamaño del círculo de la lupa */
-    border: 3px solid black; /* Color y grosor del borde */
-    border-radius: 50%; /* Hace que sea un círculo */
-    position: relative;
-  }
+  .lupa,
   
   .menu-icon {
     background: none;

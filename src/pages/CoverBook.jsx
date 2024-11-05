@@ -25,7 +25,7 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
     setIsSolid(!isSolid);
     console.log(isSolid)
 
-    const newStatus = !isSolid ? 1 : 0; // Si isSolid es false, el nuevo estado será 1; de lo contrario, 0
+    const newStatus = !isSolid ? 1 : 0; 
     updateBookStatus(book.id, newStatus)
   };
 
@@ -34,7 +34,7 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
   };
 
   const handleButtonClick = () => {
-    navigate('/resenia'); // Reemplaza con la ruta deseada
+    navigate('/resenia'); 
   }; 
 
   return (

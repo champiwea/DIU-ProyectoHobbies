@@ -90,7 +90,7 @@ const defaultBooks = [
 },
 {
     id:7,
-    estado:1,
+    estado:0,
     title: 'El Túnel',
     author: 'Ernesto Sábato',
     cover: 'https://www.sueñosdepapel.cl/cdn/shop/products/tunel.webp?v=1680098095',
@@ -98,14 +98,31 @@ const defaultBooks = [
 }
 ];
 
+const LayoutContent = ({ reviews, setReviews, books, setBooks, updateBookStatus }) => {
+  const location = useLocation(); 
 
-
+  return (
+    <div className='layout'>
+      {/* Verifica si la ruta actual es /mis_lecturas */}
+      {location.pathname === '/' ? <NavBar /> : <Navbar2 />}
+      
+      <div className='layout__page'>
+        <Routes>
+          <Route path='/lightbulb' element={<LightbulbPage />} />
+          <Route path='/buscar' element={<Buscar books={books} setBooks={setBooks} />} />
+          <Route path='/' element={<MisLecturas books={books} setBooks={setBooks} />} />
+          <Route path='/resenia' element={<ReseniaPage setReviews={setReviews} />} />
+          <Route path='/coverbook' element={<CoverBook reviews={reviews} setReviews={setReviews} updateBookStatus={updateBookStatus} />} />
+        </Routes>
+      </div>
+    </div>
+  );
+};
 
 const Layout = () => {
   const [reviews, setReviews] = useState(defaultReviews);
-  const [books, setBooks] = useState(defaultBooks)
-  
-  
+  const [books, setBooks] = useState(defaultBooks);
+
   const updateBookStatus = (bookId, newStatus) => {
     setBooks(prevBooks =>
       prevBooks.map(book =>
@@ -116,24 +133,16 @@ const Layout = () => {
 
   return (
     <BrowserRouter>
-      <div className='layout'>
-        {/* <h1 className='layout__title'>Interfaz energética</h1> */}
-        <NavBar />
-
-        <div className='layout__page'>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/lightbulb' element={<LightbulbPage />} />
-            <Route path='/buscar' element={<Buscar books={books} setBooks={setBooks}/>} />
-            <Route path='/mis_lecturas' element={<MisLecturas books={books} setBooks={setBooks}/>} />
-            <Route path='/resenia' element= {<ReseniaPage setReviews={setReviews} />} />
-            <Route path='/coverbook' element={<CoverBook reviews={reviews} setReviews={setReviews} updateBookStatus={updateBookStatus}/>} />
-          </Routes>
-        </div>
-      </div>
+      <LayoutContent 
+        reviews={reviews} 
+        setReviews={setReviews} 
+        books={books} 
+        setBooks={setBooks} 
+        updateBookStatus={updateBookStatus} 
+      />
     </BrowserRouter>
-  )
-}
+  );
+};
 
 
 

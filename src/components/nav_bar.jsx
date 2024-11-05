@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Función para alternar el estado del menú
+ 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className="navbar2">
       {/* Lupa */}
       <button className="lupa" onClick={handleClick}>
-        
+        <i className="fa fa-search"></i>
       </button>
 
       {/* Menú hamburguesa */}
@@ -35,9 +35,8 @@ const Navbar = () => {
           <button className="close-icon" onClick={toggleMenu}>
             &times;
           </button>
-          <a href="/">Inicio</a>
-          <a href="/coverbook">Acerca de</a>
-          <a href="/contact">Contacto</a>
+          <a href="/">Mis lecturas</a>
+          <a href="/">Contacto</a>
         </div>
       )}
     </nav>

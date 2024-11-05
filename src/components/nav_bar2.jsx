@@ -28,9 +28,8 @@ const Navbar2 = () => {
           <button className="close-icon" onClick={toggleMenu}>
             &times;
           </button>
-          <a href="/">Inicio</a>
-          <a href="/coverbook">Acerca de</a>
-          <a href="/contact">Contacto</a>
+          <a href="/">Mis lecturas</a>
+          <a href="/">Contacto</a>
         </div>
       )}
     </nav>

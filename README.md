@@ -4,9 +4,11 @@
 1. **Descargar las dependencias**
    ```bash
    npm install
-1. **Iniciar proyecto**
+2. **Iniciar proyecto**
    ```bash
    npm run dev
-- Se ejecuta en la ruta 'http://localhost:5050/'
+3. **Ejecutar en localhost:5050**
+   ```bash
+   http://localhost:5050/
 
   

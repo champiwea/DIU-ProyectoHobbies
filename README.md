@@ -1,6 +1,6 @@
 # DIU-ProyectoHobbies
 
-Instrucciones de uso:
+**Instrucciones de uso:**
 1. **Descargar las dependencias**
    ```bash
    npm install

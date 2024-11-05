@@ -1,0 +1,61 @@
+.buscar {
+    text-align: center;
+    
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+  
+    .search-bar {
+        margin: 1rem;
+    }
+  
+    .search-bar__input {
+        width: 80%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+  
+    .book-list__results {
+        padding: 1rem;
+    }
+  
+    .book-card {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+  
+    .book-card__cover {
+        width: 60px;
+        height: auto;
+        max-height: 90px;
+        object-fit: cover;
+        margin-right: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .book-card__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .book-card__title {
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0.2rem;
+        }
+      
+        .book-card__author {
+            color: #555;
+            text-align: left;
+            margin: 0;
+        }
+    }
+}

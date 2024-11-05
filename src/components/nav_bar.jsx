@@ -27,6 +27,12 @@ export const NavBar = () => {
       >
         Reseña
       </NavLink>
+      <NavLink
+        className={navLinkClass}
+        to='/mis_lecturas'
+      >
+        Mis Lecturas
+      </NavLink>
     </nav>
   )
 }

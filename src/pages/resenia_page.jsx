@@ -21,7 +21,7 @@ export const ReseniaPage = ({ setReviews }) => {
     console.log(rating)
     if (comment.trim().length > 0 && rating > 0) {
         const newReview = {
-            name: "Nombre Tester",
+            name: "Tu reseña",
             rating,
             comment,
         };

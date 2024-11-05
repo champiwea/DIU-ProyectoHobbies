@@ -1,40 +1,40 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+// Navbar.js
+import React, { useState } from 'react';
 
-export const NavBar = () => {
-  const navLinkClass = ({ isActive }) => {
-    const classes = ['nav-bar__link']
-    if (isActive) classes.push('nav-bar__link--active')
-    return classes.join(' ')
-  }
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Función para alternar el estado del menú
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className='nav-bar'>
-      <NavLink
-        className={navLinkClass}
-        to='/'
-      >
-        Inicio
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/lightbulb'
-      >
-        Ampolleta
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/resenia'
-      >
-        Reseña
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/mis_lecturas'
-      >
-        Mis Lecturas
-      </NavLink>
+    <nav className="navbar2">
+      {/* Flecha hacia la izquierda */}
+      <button className="back-arrow" onClick={() => window.history.back()}>
+        &#128269;
+      </button>
+
+      {/* Menú hamburguesa */}
+      <button className="menu-icon" onClick={toggleMenu}>
+        &#9776;
+      </button>
+
+      {/* Menú desplegable */}
+      {menuOpen && (
+        <div className="dropdown-menu">
+          <button className="close-icon" onClick={toggleMenu}>
+            &times;
+          </button>
+          <a href="/">Inicio</a>
+          <a href="/coverbook">Acerca de</a>
+          <a href="/contact">Contacto</a>
+        </div>
+      )}
     </nav>
-  )
-}
- 
-export default NavBar
+  );
+};
+
+export default Navbar;

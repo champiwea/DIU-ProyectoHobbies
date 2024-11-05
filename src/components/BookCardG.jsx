@@ -1,11 +1,11 @@
 import React from 'react'
 
-const BookCardG= ({ title, author, cover }) => {
+const BookCardG= ({ book, onClick }) => {
     return (
-    <div className="book-card">
-        <img src={cover} alt={`${title} cover`} className="book-card__cover" />
-        <h3 className="book-card__title">{title}</h3>
-        <p className="book-card__author">{author}</p>
+    <div className="book-card" onClick={() => onClick(book)}>
+        <img src={book.cover} alt={`${book.title} cover`} className="book-card__cover" />
+        <h3 className="book-card__title">{book.title}</h3>
+        <p className="book-card__author">{book.author}</p>
     </div>
     );
 };

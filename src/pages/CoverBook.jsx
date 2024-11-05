@@ -1,51 +1,32 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Cover from '../assets/cover-codigo-da-vinci.jpeg';
 import AddLinear from '../icons/linear/Add';
 import ChevronDown from '../icons/linear/ChevronDown';
 import ChevronUp from '../icons/linear/ChevronUp';
 import AddSolid from '../icons/solid/Check';
 import Star from '../icons/solid/Star';
+import { useLocation } from 'react-router-dom';
 
 
 import s from './CoverBook.module.css';
 
 const rating = 3;
-// const reviews = [
-//   {
-//     name: "Juan Pérez",
-//     rating: 5,
-//     comment: "Una obra maestra, me atrapó desde la primera página.",
-//   },
-//   {
-//     name: "María López",
-//     rating: 4,
-//     comment: "Muy interesante, aunque un poco predecible en algunas partes.",
-//   },
-//   {
-//     name: "Carlos Ruiz",
-//     rating: 3,
-//     comment: "Buena lectura, pero no tan emocionante como esperaba.",
-//   },
-//   {
-//     name: "Ana Gómez",
-//     rating: 4,
-//     comment: "Disfruté cada página, llena de intriga.",
-//   },
-//   {
-//     name: "Pedro Martínez",
-//     rating: 5,
-//     comment: "Una historia fascinante, muy recomendable.",
-//   },
-// ];
 
-export const CoverBook = ({reviews}) => {
-  const [isSolid, setIsSolid] = useState(false);
+export const CoverBook = ({reviews, updateBookStatus}) => {
+  const location = useLocation();
+  const { book } = location.state || {};
+
+  const [isSolid, setIsSolid] = useState(() => book?.estado === 1);
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
+  
 
   const handleClick = () => {
     setIsSolid(!isSolid);
+    console.log(isSolid)
+
+    const newStatus = !isSolid ? 1 : 0; // Si isSolid es false, el nuevo estado será 1; de lo contrario, 0
+    updateBookStatus(book.id, newStatus)
   };
 
   const toggleReviews = () => {
@@ -54,15 +35,15 @@ export const CoverBook = ({reviews}) => {
 
   const handleButtonClick = () => {
     navigate('/resenia'); // Reemplaza con la ruta deseada
-  };
+  }; 
 
   return (
     <div className={s.page}>
       <div className={s.cover}>
-        <img src={Cover} alt="Portada Codigo Da Vinci" width={180} />
+        <img src={book.cover} width={180} />
         <div className={s.label}>
-          <div className={s.title}>Código Da Vinci</div>
-          <div className={s.autor}>Dan Brown</div>
+          <div className={s.title}>{book.title}</div>
+          <div className={s.autor}>{book.author}</div>
         </div>
         <div className={s.stars}>
           {[...Array(5)].map((_, index) => (
@@ -82,11 +63,7 @@ export const CoverBook = ({reviews}) => {
         Añadir Lectura
       </button>
       <div>
-        Robert Langdon, profesor de simbología religiosa de la Universidad de Harvard, 
-        y Sophie Neveu, experta en criptología de la policía francesa, aúnan sus 
-        fuerzas para resolver un misterioso crimen cometido en el Museo de Louvre. 
-        Un secreto vital para la humanidad está en peligro. Algunos lucharán por 
-        salvaguardarlo. Otros, despiadadamente, por destruirlo.
+        {book.descrip}
       </div>
       <div className={s.reviews}>
         <h2>Reseñas</h2>

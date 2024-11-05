@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
-const StarRating = () => {
+const StarRating = ({ onRatingChange }) => {
   const [rating, setRating] = useState(0); // Estado para la calificación seleccionada
 
   const handleClick = (index) => {
     setRating(index); // Actualiza la calificación seleccionada
+    if (onRatingChange) {
+      onRatingChange(index); // Llama a la función para notificar el cambio
+    }
   };
 
   return (

@@ -1,11 +1,12 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import HomePage from '../pages/home_page'
-import LightbulbPage from '../pages/lightbulb_page'
+import CoverBook from '../pages/CoverBook';
+import HomePage from '../pages/home_page';
+import LightbulbPage from '../pages/lightbulb_page';
 import ReseniaPage from '../pages/resenia_page'
 
-import NavBar from '../components/nav_bar'
+import NavBar from '../components/nav_bar';
 
 const Layout = () => {
   return (
@@ -18,6 +19,7 @@ const Layout = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/lightbulb' element={<LightbulbPage />} />
             <Route path='/resenia' element= {<ReseniaPage/>} />
+            <Route path='/coverbook' element={<CoverBook />} />
           </Routes>
         </div>
       </div>

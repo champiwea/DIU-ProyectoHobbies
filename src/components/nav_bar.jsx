@@ -27,6 +27,12 @@ export const NavBar = () => {
       >
         Reseña
       </NavLink>
+      <NavLink
+        className={navLinkClass}
+        to='/coverbook'
+      >
+        CoverBook
+      </NavLink>
     </nav>
   )
 }

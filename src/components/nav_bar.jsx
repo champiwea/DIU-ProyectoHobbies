@@ -1,5 +1,6 @@
 // Navbar.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -10,11 +11,17 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+      navigate('/buscar');
+  };
+
   return (
     <nav className="navbar2">
-      {/* Flecha hacia la izquierda */}
-      <button className="back-arrow" onClick={() => window.history.back()}>
-        &#128269;
+      {/* Lupa */}
+      <button className="lupa" onClick={handleClick}>
+        
       </button>
 
       {/* Menú hamburguesa */}

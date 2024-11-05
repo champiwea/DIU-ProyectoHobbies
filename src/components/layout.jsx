@@ -119,7 +119,7 @@ const Layout = () => {
       <div className='layout'>
         {/* <h1 className='layout__title'>Interfaz energética</h1> */}
         <NavBar />
-        <Navbar2 />
+
         <div className='layout__page'>
           <Routes>
             <Route path='/' element={<HomePage />} />
@@ -134,5 +134,7 @@ const Layout = () => {
     </BrowserRouter>
   )
 }
+
+
 
 export default Layout

@@ -11,6 +11,5 @@
 
 4. Con click derecho en la pantalla seleccionar **Inspeccionar** , seleccionar **Toggle device toolbar** para tener vistas de otros dispositivos y escoger la dimensión de **Iphone SE**
 
-   
+![image](https://github.com/user-attachments/assets/16cd8695-5989-4fae-a3f3-4fcedd425cee)
 
-  ![image](https://github.com/user-attachments/assets/8c8cb64d-f566-4905-a01d-f9477cf6634e)

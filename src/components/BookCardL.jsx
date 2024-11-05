@@ -1,8 +1,8 @@
 import React from 'react'
 
-const BookCardL = ({ title, author, cover, variant }) => {
+const BookCardL = ({ title, author, cover, variant , onClick}) => {
     return (
-        <div className={`book-card ${variant}`}>
+        <div className={`book-card ${variant}`} onClick={onClick}>
         <img src={cover} alt={`${title} cover`} className="book-card__cover" />
         <div className="book-card__details">
             <h3 className="book-card__title">{title}</h3>

@@ -118,9 +118,8 @@ export const CoverBook = () => {
             </>
           )}
         </button>
-      <button className={s.button} onClick={handleClick}>
-        {isSolid ? <AddSolid size={24} style={{ color: 'white' }} /> : <AddLinear size={24} style={{ color: 'white' }} />}
-        Añadir Lectura
+      <button className={s.button}>
+        Añadir reseña
       </button>
     </div>
   );

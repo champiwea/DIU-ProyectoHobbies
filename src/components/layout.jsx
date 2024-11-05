@@ -5,7 +5,6 @@ import CoverBook from '../pages/CoverBook';
 import HomePage from '../pages/home_page';
 import LightbulbPage from '../pages/lightbulb_page';
 import ReseniaPage from '../pages/resenia_page'
-
 import NavBar from '../components/nav_bar';
 import Navbar2 from '../components/nav_bar2';
 import MisLecturas from '../pages/mis_lecturas'
@@ -38,8 +37,7 @@ const defaultReviews = [
     comment: "Una historia fascinante, muy recomendable.",
   },
 ];
-import MisLecturas from '../pages/mis_lecturas'
-import Buscar from '../pages/buscar'
+
 
 const Layout = () => {
   const [reviews, setReviews] = useState(defaultReviews);

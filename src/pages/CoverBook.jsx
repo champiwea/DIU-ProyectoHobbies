@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Cover from '../assets/cover-codigo-da-vinci.jpeg';
 import AddLinear from '../icons/linear/Add';
 import ChevronDown from '../icons/linear/ChevronDown';
@@ -6,40 +7,42 @@ import ChevronUp from '../icons/linear/ChevronUp';
 import AddSolid from '../icons/solid/Check';
 import Star from '../icons/solid/Star';
 
+
 import s from './CoverBook.module.css';
 
 const rating = 3;
-const reviews = [
-  {
-    name: "Juan Pérez",
-    rating: 5,
-    comment: "Una obra maestra, me atrapó desde la primera página.",
-  },
-  {
-    name: "María López",
-    rating: 4,
-    comment: "Muy interesante, aunque un poco predecible en algunas partes.",
-  },
-  {
-    name: "Carlos Ruiz",
-    rating: 3,
-    comment: "Buena lectura, pero no tan emocionante como esperaba.",
-  },
-  {
-    name: "Ana Gómez",
-    rating: 4,
-    comment: "Disfruté cada página, llena de intriga.",
-  },
-  {
-    name: "Pedro Martínez",
-    rating: 5,
-    comment: "Una historia fascinante, muy recomendable.",
-  },
-];
+// const reviews = [
+//   {
+//     name: "Juan Pérez",
+//     rating: 5,
+//     comment: "Una obra maestra, me atrapó desde la primera página.",
+//   },
+//   {
+//     name: "María López",
+//     rating: 4,
+//     comment: "Muy interesante, aunque un poco predecible en algunas partes.",
+//   },
+//   {
+//     name: "Carlos Ruiz",
+//     rating: 3,
+//     comment: "Buena lectura, pero no tan emocionante como esperaba.",
+//   },
+//   {
+//     name: "Ana Gómez",
+//     rating: 4,
+//     comment: "Disfruté cada página, llena de intriga.",
+//   },
+//   {
+//     name: "Pedro Martínez",
+//     rating: 5,
+//     comment: "Una historia fascinante, muy recomendable.",
+//   },
+// ];
 
-export const CoverBook = () => {
+export const CoverBook = ({reviews}) => {
   const [isSolid, setIsSolid] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setIsSolid(!isSolid);
@@ -47,6 +50,10 @@ export const CoverBook = () => {
 
   const toggleReviews = () => {
     setShowAll(!showAll);
+  };
+
+  const handleButtonClick = () => {
+    navigate('/resenia'); // Reemplaza con la ruta deseada
   };
 
   return (
@@ -118,7 +125,7 @@ export const CoverBook = () => {
             </>
           )}
         </button>
-      <button className={s.button}>
+      <button className={s.button} onClick={handleButtonClick}>
         Añadir reseña
       </button>
     </div>

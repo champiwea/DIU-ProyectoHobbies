@@ -7,8 +7,8 @@
 2. **Iniciar proyecto**
    ```bash
    npm run dev
-3. **Ejecutar en localhost:5050**
-   ```bash
-   http://localhost:5050/
+3. **Ejecutar en:** http://localhost:5050/
+
+   
 
   

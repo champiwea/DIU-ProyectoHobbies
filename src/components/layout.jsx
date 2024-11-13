@@ -60,7 +60,7 @@ const defaultBooks = [
       estado:1,
       title: 'Harry Potter y la piedra filosofal',
       author: 'J.K Rowling',
-      cover: 'https://images.cdn2.buscalibre.com/fit-in/360x360/e3/bc/e3bcd85377567759874a0664f894a67b.jpg',
+      cover: 'https://http2.mlstatic.com/D_NQ_NP_685921-MLU77516556359_072024-O.webp',
       descrip: 'Harry vive con sus horribles nos y su insoportable primo Dudley hasta que su ingreso en el Colegio Hogwarts de Magia y Hechicería cambia su vida para siempre. Allí aprenderá trucos y encantamientos fabulosos, y hará un puñado de buenos amigos... aunque también algunos temibles enemigos. Y, sobre todo, conocerá los secretos que lo ayudarán a cumplir con su destino'
 
   },
@@ -77,7 +77,7 @@ const defaultBooks = [
     estado:0,
     title: 'El Código Da Vinci',
     author: 'Dan Brown',
-    cover: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwzGzZ6k9gvSQx_DDfyeKxIxPQVsVXi9aycQ&s',
+    cover: 'https://intothebooksheart.com/wp-content/uploads/2017/02/918tCwcm4L.jpg',
     descrip: `Robert Langdon recibe una llamada en mitad de la noche: el conservador del museo del Louvre ha sido asesinado en extrañas circunstancias y junto a su cadáver ha aparecido un desconcertante mensaje cifrado. Al profundizar en la investigación, Langdon, experto en simbología, averigua que las pistas conducen a las obras de Leonardo Da Vinci... y que están a la vista de todos, ocultas por el ingenio del pintor.`
 },
 {

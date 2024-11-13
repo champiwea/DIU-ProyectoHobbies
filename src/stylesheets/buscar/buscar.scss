@@ -28,16 +28,18 @@
         margin-bottom: 1rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid #ddd;
+        width: 100%; 
     }
-  
+    
     .book-card__cover {
-        width: 60px;
+        width: 89px; /* Ajusta el ancho para hacerlo más grande */
         height: auto;
-        max-height: 90px;
+        max-height: 150px; /* Puedes incrementar esto si es necesario */
         object-fit: cover;
         margin-right: 0.5rem;
         border-radius: 4px;
     }
+    
 
     .book-card__details {
         display: flex;

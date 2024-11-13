@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AddLinear from '../icons/linear/Add';
 import ChevronDown from '../icons/linear/ChevronDown';
@@ -13,6 +13,10 @@ import s from './CoverBook.module.css';
 const rating = 3;
 
 export const CoverBook = ({reviews, updateBookStatus}) => {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const location = useLocation();
   const { book } = location.state || {};
 

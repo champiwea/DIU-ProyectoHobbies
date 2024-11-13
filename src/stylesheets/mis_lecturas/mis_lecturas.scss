@@ -1,54 +1,59 @@
 /* src/components/styles.css */
 .mis_lecturas {
     text-align: center;
-    
 
-    h1 {
-        font-size: 1.8rem;
-        margin: 1.5rem 0;
-    }
 
+.mis_lecturas h1 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+.book_gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr)); /* Ajusta el ancho mínimo */
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+@media (min-width: 1024px) { /* Añade estilos específicos para pantallas grandes */
     .book_gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1rem;
-        padding: 0.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 180px)); /* Reduce el ancho máximo en pantallas grandes */
     }
-    
-    .book-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-    }
+}
 
-    .book-card:hover {
-        transform: scale(1.05);
-    }
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
 
-    .book-card__cover {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        object-position: top;
-        border-bottom: 1px solid #ddd;
-    }
+.book-card:hover {
+    transform: scale(1.05);
+}
 
-    .book-card__title {
-        font-size: 1.1rem;
-        margin: 0.1rem ;
-        margin-left: 0.5rem;
-        text-align: left;
-    }
+.book-card__cover {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
 
-    .book-card__author {
-        color: #555;
-        font-size: 0.8rem;
-        margin-bottom: 0.9rem;
-        margin: 0.1rem ;
-        margin-left: 0.5rem;
-        text-align: left;
-    }
-    
+.book-card__title {
+    font-size: 1.1rem;
+    margin: 0.1rem;
+    margin-left: 0.5rem;
+    text-align: left;
+}
+
+.book-card__author {
+    color: #555;
+    font-size: 0.8rem;
+    margin: 0.1rem;
+    margin-left: 0.5rem;
+    text-align: left;
+    margin-bottom: 0.9rem;
+}
 }

@@ -1,4 +1,3 @@
-/* src/components/styles.css */
 .mis_lecturas {
     text-align: center;
 
@@ -10,14 +9,14 @@
 
 .book_gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr)); /* Ajusta el ancho mínimo */
+    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
     gap: 1rem;
     padding: 0.5rem;
 }
 
-@media (min-width: 1024px) { /* Añade estilos específicos para pantallas grandes */
+@media (min-width: 1024px) {
     .book_gallery {
-        grid-template-columns: repeat(auto-fit, minmax(170px, 180px)); /* Reduce el ancho máximo en pantallas grandes */
+        grid-template-columns: repeat(auto-fit, minmax(170px, 180px));
     }
 }
 

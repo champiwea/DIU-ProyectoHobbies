@@ -1,6 +1,6 @@
 // Navbar.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -35,8 +35,8 @@ const Navbar = () => {
           <button className="close-icon" onClick={toggleMenu}>
             &times;
           </button>
-          <a href="/">Mis lecturas</a>
-          <a href="/">Contacto</a>
+          <Link to="/">Mis lecturas</Link>
+          <Link to="/">Contacto</Link>
         </div>
       )}
     </nav>

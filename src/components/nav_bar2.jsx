@@ -1,5 +1,6 @@
 // Navbar.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Navbar2 = () => {
@@ -28,8 +29,8 @@ const Navbar2 = () => {
           <button className="close-icon" onClick={toggleMenu}>
             &times;
           </button>
-          <a href="/">Mis lecturas</a>
-          <a href="/">Contacto</a>
+          <Link to="/">Mis lecturas</Link>
+          <Link to="/">Contacto</Link>
         </div>
       )}
     </nav>

@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
 import StarRating from '../components/StarRating'
 
-export const ReseniaPage = ({ setReviews }) => {
+export const ReseniaPage = ({ reviews, setReviews }) => {
   const [comment, setComment] = useState(''); // Estado para el comentario
   const [rating, setRating] = useState(0); // Estado para la calificación
   const [successMessage, setSuccessMessage] = useState(''); // Estado para el mensaje de éxito
+
+  const location = useLocation();
+  const { book } = location.state || {};
+
+
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -27,11 +33,17 @@ export const ReseniaPage = ({ setReviews }) => {
         };
 
         console.log(newReview);
-        setReviews(prevReviews => [...prevReviews, newReview]);
+        setReviews((prevReviews) =>
+          prevReviews.map((reviewGroup) =>
+            reviewGroup.id === book.id
+              ? { ...reviewGroup, reviews: [ newReview, ...reviewGroup.reviews,] }
+              : reviewGroup
+          )
+        );
         setSuccessMessage('¡Reseña añadida correctamente!');
         setTimeout(() => {
             window.history.back();
-        }, 2000);
+        }, 1000);
     } else {
         alert('Por favor, añade un comentario y selecciona una calificación.');
     }

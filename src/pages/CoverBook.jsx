@@ -40,7 +40,7 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
   };
 
   const handleButtonClick = () => {
-    navigate('/resenia'); 
+    navigate('/resenia', { state: { book }}); 
   }; 
 
   return (

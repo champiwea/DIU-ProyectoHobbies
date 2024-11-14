@@ -185,7 +185,7 @@ const LayoutContent = ({ reviews, setReviews, books, setBooks, updateBookStatus 
           <Route path='/lightbulb' element={<LightbulbPage />} />
           <Route path='/buscar' element={<Buscar books={books} setBooks={setBooks} />} />
           <Route path='/' element={<MisLecturas books={books} setBooks={setBooks} />} />
-          <Route path='/resenia' element={<ReseniaPage setReviews={setReviews} />} />
+          <Route path='/resenia' element={<ReseniaPage reviews={reviews} setReviews={setReviews} />} />
           <Route path='/coverbook' element={<CoverBook reviews={reviews} setReviews={setReviews} updateBookStatus={updateBookStatus} />} />
         </Routes>
       </div>

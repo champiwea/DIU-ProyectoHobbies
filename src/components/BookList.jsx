@@ -1,8 +1,18 @@
 // src/components/BookList.jsx
-import React, { useState } from 'react'
-import BookCard from './BookCardL'
-import SearchBar from './SearchBar'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BookCard from './BookCardL';
+import SearchBar from './SearchBar';
+
+const removeAccents = (str) => {
+  return str
+    .replace(/[áàäâã]/gi, 'a')
+    .replace(/[éèëê]/gi, 'e')
+    .replace(/[íìïî]/gi, 'i')
+    .replace(/[óòöôõ]/gi, 'o')
+    .replace(/[úùüû]/gi, 'u')
+    .replace(/ñ/gi, 'n');
+};
 
 const BookList = ({books, setBooks}) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -12,11 +22,10 @@ const BookList = ({books, setBooks}) => {
         navigate('/coverbook', { state: { book } }); 
     };
 
-
     const filteredBooks = books.filter(
-    (book) =>
-        book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchTerm.toLowerCase())
+        (book) =>
+        removeAccents(book.title.toLowerCase()).includes(removeAccents(searchTerm.toLowerCase())) ||
+        removeAccents(book.author.toLowerCase()).includes(removeAccents(searchTerm.toLowerCase()))
     );
 
     return (

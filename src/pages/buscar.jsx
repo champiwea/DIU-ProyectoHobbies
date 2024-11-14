@@ -1,6 +1,6 @@
 // src/App.js
-import React from 'react'
-import BookList from '../components/BookList'
+import React from 'react';
+import BookList from '../components/BookList';
 
 
 export const Buscar = ({books, setBooks}) => {

@@ -10,33 +10,107 @@ import Navbar2 from '../components/nav_bar2';
 import MisLecturas from '../pages/mis_lecturas'
 import Buscar from '../pages/buscar'
 
+// const defaultReviews = [
+//   {
+//     name: "Juan Pérez",
+//     rating: 5,
+//     comment: "Una obra maestra, me atrapó desde la primera página.",
+//   },
+//   {
+//     name: "María López",
+//     rating: 4,
+//     comment: "Muy interesante, aunque un poco predecible en algunas partes.",
+//   },
+//   {
+//     name: "Carlos Ruiz",
+//     rating: 3,
+//     comment: "Buena lectura, pero no tan emocionante como esperaba.",
+//   },
+//   {
+//     name: "Ana Gómez",
+//     rating: 4,
+//     comment: "Disfruté cada página, llena de intriga.",
+//   },
+//   {
+//     name: "Pedro Martínez",
+//     rating: 5,
+//     comment: "Una historia fascinante, muy recomendable.",
+//   },
+// ];
+
 const defaultReviews = [
   {
-    name: "Juan Pérez",
-    rating: 5,
-    comment: "Una obra maestra, me atrapó desde la primera página.",
+    id: 1,
+    reviews: [
+      { name: "Laura Estrada", rating: 5, comment: "Un viaje único, inolvidable de principio a fin." },
+      { name: "Miguel Torres", rating: 4, comment: "Interesante y profundo, aunque algo complejo en algunas partes." },
+      { name: "Sofía Reyes", rating: 5, comment: "Cada capítulo es mejor que el anterior, lo disfruté mucho." },
+      { name: "Daniel Ríos", rating: 3, comment: "Entretenido, pero un poco largo para mi gusto." },
+      { name: "Patricia Varela", rating: 4, comment: "Excelente narrativa, aunque la trama es algo densa." },
+    ],
   },
   {
-    name: "María López",
-    rating: 4,
-    comment: "Muy interesante, aunque un poco predecible en algunas partes.",
+    id: 2,
+    reviews: [
+      { name: "Luis Martínez", rating: 5, comment: "Inspirador y conmovedor, una verdadera joya." },
+      { name: "Andrea Silva", rating: 4, comment: "Me gustó, aunque esperaba un poco más de acción." },
+      { name: "Javier Díaz", rating: 3, comment: "Interesante, pero difícil de seguir en algunos capítulos." },
+      { name: "Camila Herrera", rating: 5, comment: "Una obra que invita a reflexionar profundamente." },
+      { name: "Felipe González", rating: 4, comment: "Muy bueno, pero algo repetitivo en ciertas partes." },
+    ],
   },
   {
-    name: "Carlos Ruiz",
-    rating: 3,
-    comment: "Buena lectura, pero no tan emocionante como esperaba.",
+    id: 3,
+    reviews: [
+      { name: "Isabel Peña", rating: 4, comment: "Trama intrigante, aunque me costó engancharme al principio." },
+      { name: "Raúl Rivas", rating: 5, comment: "Lo recomiendo, tiene giros inesperados y personajes profundos." },
+      { name: "Verónica Sáez", rating: 3, comment: "Bueno, pero algunos detalles son predecibles." },
+      { name: "Fernando Ortiz", rating: 4, comment: "Entretenido y bien escrito, ideal para una tarde." },
+      { name: "Lorena Ramos", rating: 5, comment: "Me sorprendió mucho, no esperaba que fuera tan bueno." },
+    ],
   },
   {
-    name: "Ana Gómez",
-    rating: 4,
-    comment: "Disfruté cada página, llena de intriga.",
+    id: 4,
+    reviews: [
+      { name: "Roberto Soto", rating: 3, comment: "Entretenido, pero no tan memorable como esperaba." },
+      { name: "Marta Fernández", rating: 4, comment: "Buena historia, aunque algunos personajes no me convencieron." },
+      { name: "Cristina Vega", rating: 5, comment: "Lo disfruté muchísimo, tiene una profundidad inesperada." },
+      { name: "Carlos Álvarez", rating: 4, comment: "Excelente, con algunos momentos realmente emotivos." },
+      { name: "Gabriela Valdés", rating: 3, comment: "Interesante, aunque esperaba más desarrollo en el final." },
+    ],
   },
   {
-    name: "Pedro Martínez",
-    rating: 5,
-    comment: "Una historia fascinante, muy recomendable.",
+    id: 5,
+    reviews: [
+      { name: "Esteban Muñoz", rating: 5, comment: "Un clásico moderno, de esos libros que te marcan." },
+      { name: "Laura Quintana", rating: 4, comment: "Buena trama, aunque algo lenta al inicio." },
+      { name: "Tomás Morales", rating: 5, comment: "Me encantó, perfecto para quienes buscan algo profundo." },
+      { name: "Marcela Acuña", rating: 3, comment: "Interesante, pero sentí que faltó desarrollo en algunos temas." },
+      { name: "José Reyes", rating: 4, comment: "Me sorprendió gratamente, definitivamente lo recomiendo." },
+    ],
+  },
+  {
+    id: 6,
+    reviews: [
+      { name: "Lucía Campos", rating: 4, comment: "Una historia conmovedora, aunque el final es predecible." },
+      { name: "Francisco Guzmán", rating: 5, comment: "Emocionante y bien escrito, no pude dejar de leer." },
+      { name: "Carolina Vargas", rating: 3, comment: "Entretenido, pero le faltó profundidad en los personajes." },
+      { name: "Pablo Figueroa", rating: 4, comment: "Una lectura ligera y entretenida, ideal para el verano." },
+      { name: "Isabel Núñez", rating: 5, comment: "Me encantó, tiene una narrativa atrapante y muy emotiva." },
+    ],
+  },
+  {
+    id: 7,
+    reviews: [
+      { name: "Rodrigo Salinas", rating: 5, comment: "Simplemente espectacular, cada página es mejor que la anterior." },
+      { name: "Alejandra Fuentes", rating: 4, comment: "Buena lectura, aunque algunos giros son predecibles." },
+      { name: "David Castro", rating: 3, comment: "Interesante pero lento, me costó engancharme." },
+      { name: "Claudia Escobar", rating: 5, comment: "Perfecto para quienes buscan una historia bien desarrollada." },
+      { name: "Elena Ríos", rating: 4, comment: "Una historia apasionante, aunque no es para todos los gustos." },
+    ],
   },
 ];
+
 
 const defaultBooks = [
   {

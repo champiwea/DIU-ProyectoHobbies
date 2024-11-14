@@ -20,6 +20,8 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
   const location = useLocation();
   const { book } = location.state || {};
 
+  const bookReviews = reviews.find((reviewGroup) => reviewGroup.id === book.id)?.reviews || [];
+
   const [isSolid, setIsSolid] = useState(() => book?.estado === 1);
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
@@ -72,7 +74,7 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
       <div className={s.reviews}>
         <h2>Reseñas</h2>
         <hr className={s.reviewDivider} />
-        {reviews.slice(0, showAll ? reviews.length : 2).map((review, index) => (
+        {bookReviews.slice(0, showAll ? bookReviews.length : 2).map((review, index) => (
           <div key={index} className={s.review}>
             <div className={s.reviewHeader}>
               <span className={s.reviewName}>{review.name}</span>
@@ -90,7 +92,7 @@ export const CoverBook = ({reviews, updateBookStatus}) => {
               </div>
             </div>
             <div className={s.reviewComment}>{review.comment}</div>
-            {index < (showAll ? reviews.length - 1 : 1) && <hr className={s.reviewDivider} />}
+            {index < (showAll ? bookReviews.length - 1 : 1) && <hr className={s.reviewDivider} />}
           </div>
         ))}
         <hr className={s.reviewDivider} />
